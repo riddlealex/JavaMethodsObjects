@@ -1,11 +1,11 @@
 public class Employee {
     private String name;
-    private String department;
+    private int department;
     private int salary;
     private static int counter = 0;
     private final int id;
 
-    public Employee(String name, String department, int salary) {
+    public Employee(String name, int department, int salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
@@ -16,7 +16,7 @@ public class Employee {
         return name;
     }
 
-    public String getDepartment() {
+    public int getDepartment() {
         return department;
     }
 
@@ -29,7 +29,7 @@ public class Employee {
         return id;
     }
 
-    public void setDepartment(String department) {
+    public void setDepartment(int department) {
         this.department = department;
     }
 
@@ -39,6 +39,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Номер: "+getId()+" ФИО: "+getName()+" Зарплата: "+getSalary()+" Отдел: "+ getDepartment();
+        return "Номер: "+getId()+", ФИО: "+getName()+", Зарплата: "+getSalary()+", Отдел: "+ getDepartment();
     }
 }
